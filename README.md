@@ -15,6 +15,11 @@ The Fully Convolutional Network (FCN) makes no use of any pre- and post-processi
 end-to-end taking input of arbitrary size. Hence, the FCN feature extraction can be performed whole-image-at\-atime 
 without any operation for the input image. 
 
+The FCN contains 16 convolutional layers. To obtain the local-to-global feature representation, when an image is fed 
+to this network, we fuse the features from the fine layer pool1 and the coarse layer pool5, which can let
+our model make local predictions that respect global structure. The sizes of pool1 layer and pool5 layer are 
+349 * 349 * 64 and 22 * 22 * 512, respectively. We resize them as the same size as the input image.
+
 The FCN is first proposed in "Fully convolutional networks for semantic segmentation", published by J. Long *et. al.* 
 in CVPR, 2015.
 ### Project Layout
@@ -32,3 +37,5 @@ and save the cell results in .mat file named layer6 and layer32.
 This file is aim to teach you how to use the extarcted FCN features. 
 
 For every image, you can use the DeepFeat32and6.m to extract the FCN features for every pixel or superpixel. 
+
+Because of the zero-padding, we should remove some pixels aside the edges of the final extracted feature map. 
