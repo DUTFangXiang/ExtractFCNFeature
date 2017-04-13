@@ -17,4 +17,18 @@ without any operation for the input image.
 
 The FCN is first proposed in "Fully convolutional networks for semantic segmentation", published by J. Long *et. al.* 
 in CVPR, 2015.
+### Project Layout
+#### Extract_FCN_features 
+The main function of this file is for extracting the FCN features from the existed FCN structure.  
 
+First, you need to download the pascal-fcn8s-dag.mat in http://www.vlfeat.org/matconvnet/pretrained/ and save it in FCN file.
+
+Then, you open the main.m file and modify some parameters according to the instructions.
+
+In our work, we extract the fine layer pool1(the 6th)—— 349×349×64 and the coarse layer pool5(the 32th) —— 22×22×512,
+and save the cell results in .mat file named layer6 and layer32.
+
+#### Use_FCN_Features
+This file is aim to teach you how to use the extarcted FCN features. 
+
+For every image, you can use the DeepFeat32and6.m to extract the FCN features for every pixel or superpixel. 
