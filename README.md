@@ -12,7 +12,7 @@ the main task is published in https://github.com/vlfeat/matconvnet. And, http://
 page for Matconvnet project. 
 ### FCN 
 The Fully Convolutional Network (FCN) makes no use of any pre- and post-processing complication, which is trained 
-end-to-end taking input of arbitrary size. Hence, the FCN feature extraction can be performed whole-image-at-atime 
+end-to-end taking input of arbitrary size. Hence, the FCN feature extraction can be performed whole-image-at\-atime 
 without any operation for the input image. 
 
 The FCN is first proposed in "Fully convolutional networks for semantic segmentation", published by J. Long *et. al.* 
