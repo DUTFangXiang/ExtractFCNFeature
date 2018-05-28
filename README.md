@@ -26,7 +26,7 @@ in CVPR, 2015.
 #### Extract_FCN_features 
 The main function of this file is for extracting the FCN features from the existed FCN structure.  
 
-First, you need to download the pascal-fcn8s-dag.mat in http://www.vlfeat.org/matconvnet/pretrained/ and save it in FCN file.
+First, you need to download the pascal-fcn8s-dag.mat in http://www.vlfeat.org/matconvnet/models/beta18/ and save it in FCN file.
 
 Then, you open the main.m file and modify some parameters according to the instructions.
 
